@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgb(61, 2, 63);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #d3a4ba;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+      max-width: fit-content;
+    }
+
+    nav a:hover {
+      color: #00e6e6;
+    }
+
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #f0f4f8;
+    }
+    header nav {
+      margin-right: 4rem;
+
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    .toggle-btn {
+      background-color: #8a5c91;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    .toggle-btn:hover {
+      background-color: #e56cf5;
+    }
+
+    .edu-grid,
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .edu-card,
+    .cert-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .edu-card:hover,
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .edu-card h3,
+    .cert-card h3 {
+      margin-top: 0;
+      color: #8a5c91;
+    }
+
+    .edu-card p,
+    .cert-card p {
+      margin: 0.5rem 0;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .toggle-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Hannah's Portfolio</div>
+    <h1>Education</h1>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="educatin.html">EDUCATION</a>
+      <a href="project.html">PROJECT</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+  <div class="container">
+    <button class="toggle-btn" onclick="toggleEducation()">Show/Hide Education</button>
+    <div class="edu-grid" id="education-section">
+      <div class="edu-card">
+        <h3>Master of Computer Applications</h3>
+        <p><strong>College:</strong> Marudhar Kesari Jain College for Women</p>
+        <p><strong>Year:</strong> 2022 – 2024</p>
+        <p><strong>Grade:</strong> First Class</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>B.Sc Mathematics</h3>
+        <p><strong>College:</strong> Islamiah Women's Arts and Science College</p>
+        <p><strong>Year:</strong> 2019 – 2022</p>
+        <p><strong>Grade:</strong> First Class</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>HSC (12th Grade)</h3>
+        <p><strong>School:</strong> Govt Girls Higher Secondary School</p>
+        <p><strong>Year:</strong> 2018 – 2019</p>
+        <p><strong>Grade:</strong> 75%</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>SSLC (10th Grade)</h3>
+        <p><strong>School:</strong> Govt Girls Higher Secondary School</p>
+        <p><strong>Year:</strong> 2016 – 2017</p>
+        <p><strong>Grade:</strong> 85%</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 3rem; color: #8a5c91;">Certificate Courses</h2>
+    <button class="toggle-btn" onclick="toggleCertificates()">Show/Hide Certificates</button>
+    <div class="cert-grid" id="certificate-section">
+      <div class="cert-card">
+        <h3>HDCA(Honour in Deploma Computer Application) </h3>
+        <p><strong>Provider:</strong> Appolo Computer Education LTD.</p>
+        <p><strong>Topics:</strong> Windows, MS Office, HTML,C Language & C++</p>
+      </div>
+
+      <div class="cert-card">
+        <h3>Full-Stack Web Development Cource</h3>
+        <p><strong>Provider:</strong> INTERNSHALLA TRAININGS</p>
+        <p><strong>Topics:</strong> HTML, CSS, JavaScript, BOOTSTRAP,MYSQL</p>
+      </div>
+      <div class="cert-card">
+        <h3>Full-Stack Web Development Internship</h3>
+        <p><strong>Provider:</strong> INTERNSHALLA TRAININGS</p>
+        <p><strong>Topics:</strong> HTML, CSS, JavaScript, BOOTSTRAP,MYSQL</p>
+      </div>
+      <div class="cert-card">
+        <h3>NPTEL(Swayam)</h3>
+        <p><strong>Provider:</strong> Soft-Skill</p>
+        <p><strong>PERCENTAGE:</strong> 66%</p>
+      </div>
+
+      <div class="cert-card">
+        <h3>Androide Application Development</h3>
+        <p><strong>Provider:</strong> Great Learning</p>
+      </div>
+       <div class="cert-card">
+        <h3>OOP in Python</h3>
+        <p><strong>Provider:</strong> Great Learning</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleEducation() {
+      const section = document.getElementById('education-section');
+      section.style.display = section.style.display === 'none' ? 'grid' : 'none';
+    }
+
+    function toggleCertificates() {
+      const section = document.getElementById('certificate-section');
+      section.style.display = section.style.display === 'none' ? 'grid' : 'none';
+    }
+  </script>
+ <footer style="background-color: #83579c; color: white; text-align: center; padding: 2rem 1rem; position: relative;">
+  <p style="margin: 0.5rem 0;">&copy; 2025 Hannah Kashifa | All Rights Reserved</p>
+
+  <!-- Navigation Links -->
+  <div style="margin: 1rem 0;">
+    <a href="index.html" style="color: #ffffff; margin: 0 1rem; text-decoration: underline;">Go to Home Page</a>
+    <a href="#" onclick="scrollToTop()" style="color: #ffffff; margin: 0 1rem; text-decoration: underline;">Go to Top</a>
+  </div>
+</footer>
+</body>
+</html>

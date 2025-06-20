@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact & Hobbies | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #692e64;
+      --accent: #723477;
+      --light: #ffffff;
+      --gray: #f5f7fa;
+      --text: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--text);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgb(61, 2, 63);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      color:#ccc
+    }
+
+.logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #d3a4ba;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00e6e6;
+    }
+    header nav {
+      margin-right: 4rem;
+
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section h2 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin-top: 6px;
+    }
+
+    .contact-info, .contact-form {
+      background: var(--gray);
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(113, 43, 131, 0.05);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-item i {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-right: 0.8rem;
+      width: 24px;
+    }
+
+    .contact-item span {
+      font-size: 1rem;
+    }
+
+    .social-icons a {
+      margin-right: 1rem;
+      font-size: 1.4rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .resume-link {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .qr-code {
+      margin-top: 1.5rem;
+    }
+
+    .qr-code img {
+      width: 150px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background: var(--accent);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #8a5c91;
+    }
+
+    @media (max-width: 600px) {
+      .qr-code img {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Hannah's Portfolio</div>
+    <h1>Education</h1>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="educatin.html">EDUCATION</a>
+      <a href="project.html">PROJECT</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+  <div class="container">
+
+    <!-- Contact Info -->
+    <section class="section">
+      <h2>Contact Information</h2>
+      <div class="contact-info">
+        <div class="contact-item"><i class="fas fa-envelope"></i><span>hannah.kashifa@example.com</span></div>
+        <div class="contact-item"><i class="fas fa-phone"></i><span>+91 9489000604</span></div>
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Ambur, Tamil Nadu, India</span></div>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/hannah_hanfiya" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/hannah-kashifa-5a4bb82a0" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <a class="resume-link" href="hannah%20Kashifa%20resume%20.pdf" download>Download Resume</a>
+
+        <div class="qr-code">
+          <p><strong>Scan to WhatsApp Me:</strong></p>
+          <img src="qr.jpeg" alt="WhatsApp QR Code" />
+        </div>
+
+        <iframe src="https://maps.google.com/maps?q=Ambur&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section">
+      <h2>Contact Me</h2>
+      <form class="contact-form" action="https://formspree.io/f/hannahkashifa@gmail.com" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </div>
+<!-- Footer -->
+<footer style="background-color: #83579c; color: white; text-align: center; padding: 2rem 1rem; position: relative;">
+  <p style="margin: 0.5rem 0;">&copy; 2025 Hannah Kashifa | All Rights Reserved</p>
+
+  <!-- Navigation Links -->
+  <div style="margin: 1rem 0;">
+    <a href="index.html" style="color: #ffffff; margin: 0 1rem; text-decoration: underline;">Go to Home Page</a>
+    <a href="#" onclick="scrollToTop()" style="color: #ffffff; margin: 0 1rem; text-decoration: underline;">Go to Top</a>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7fafc;
+      color: #2c3e50;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgb(61, 2, 63);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      color: #ccc;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #d3a4ba;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00e6e6;
+    }
+
+    header nav {
+      margin-right: 4rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+      margin-top: 5rem;
+      flex: 1; /* Makes this section grow to push footer down */
+      width: 100%;
+    }
+
+    .toggle-btn {
+      background-color: #8a5c91;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    .toggle-btn:hover {
+      background-color: #b150b4;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #8a5c91;
+    }
+
+    .project-card p {
+      margin: 0.5rem 0;
+    }
+
+    .tools {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      background-color: #83579c;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    footer a {
+      color: #ffffff;
+      margin: 0 1rem;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .toggle-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Hannah's Portfolio</div>
+    <h1>Projects</h1>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="educatin.html">EDUCATION</a>
+      <a href="project.html">PROJECT</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <button class="toggle-btn" onclick="toggleProjects()">Show/Hide Projects</button>
+
+    <div class="project-grid" id="project-section">
+      <div class="project-card">
+        <h3>Biodegradable Detection using Deep Learning</h3>
+        <p>A system that classifies waste as biodegradable or non-biodegradable using image classification.</p>
+        <p class="tools"><strong>Tools:</strong> HTML, CSS, JavaScript, Python</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Personal Portfolio Website</h3>
+        <p>My portfolio website showcasing my skills, education, and projects with a responsive design.</p>
+        <p class="tools"><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p style="margin: 0.5rem 0;">&copy; 2025 Hannah Kashifa | All Rights Reserved</p>
+    <div style="margin: 1rem 0;">
+      <a href="index.html">Go to Home Page</a>
+      <a href="#" onclick="scrollToTop()">Go to Top</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleProjects() {
+      const section = document.getElementById('project-section');
+      section.style.display = section.style.display === 'none' ? 'grid' : 'none';
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
